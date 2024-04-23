@@ -19,8 +19,9 @@ body {
     padding: 0;
   }
 
-  header h1 {
-    padding: 30px;
+  header p {
+    padding: 50px;
+    font-size: 1.5rem;
   }
 
   nav {
@@ -43,6 +44,7 @@ body {
   
   aside {
     grid-column: 2 / 4;
+    color: rgb(103,103,103);
   }
   
   footer {
@@ -51,7 +53,10 @@ body {
     padding: 2rem;
     text-align: center;
     grid-column: 1 / 4;
+    font-size: 1.5rem;
   }
+
+
 
 main, aside {
     padding: 20px;
