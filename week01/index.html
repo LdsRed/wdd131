@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,43 +9,85 @@
     Jordan Larcher 
     Home Page">
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
     <title>WDD 131 - Dynamic Web Fundamentals - Jordan Larcher</title>
 </head>
+
 <body>
 
     <header>
         <h1>WDD 131: Dynamic Web Fundamentals - <span>Jordan Larcher</span></h1>
         <nav>
-            <a href="" class="active">Linkedin</a>
-            <a href="">I-Learn</a>
-            <a href="">Favorite Scripture</a>
+            <a href="https://www.linkedin.com/in/jordan-erick-larcher/" target="_blank" class="active">Linkedin</a>
+            <a href=" https://byui.instructure.com/" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p41#p41" target="_blank">Favorite Scripture</a>
             <a href="#">Final Project</a>
         </nav>
-        
+
     </header>
 
     <main>
         <section class="card">
+            
             <h2>About Me</h2>
+            
+            <div class="block-1">
+
+                <div class="text-box">
+                    <p>I am a QA Tester at Globant, a leading digital transformation company 
+                        that provides software solutions for clients in different industries. 
+                        I have been working in this role for 3 years, and I have successfully designed, 
+                        executed, and reported QA tests for various projects, using Postman API, System 
+                        Testing, and User Acceptance Testing skills. I have also managed the user acceptance 
+                        test cases, created boards using Jira, and provided knowledge and support in the structure 
+                        of the product. I have collaborated with business partners, technical leaders, and QA leaders 
+                        to ensure alignment and quality throughout the software testing life cycle.</p>
+    
+                </div>
+                
+                <img src="images/larcher-picture.jpeg" alt="">
+            </div>
+
+
+            <h2 class="block-2-p">Chaco, Argentina</h2>
+
+            <div class="block-2">
+
+                <figure class="figure-config">
+                    <img class="second-section-img" src="images/banderaargentina.png" alt="">
+                    <figcaption class="figcaption-config">Best Country</figcaption>
+                </figure>
+
+                <div class="text-box2">
+                    <p>Argentina is a diverse and vibrant country located in South America, known 
+                        for its rich culture, stunning landscapes, and passionate people. It is the 
+                        eighth-largest country in the world by land area and is bordered by Chile, 
+                        Bolivia, Paraguay, Brazil, Uruguay, and the South Atlantic Ocean.</p>
+                </div>
+                
+            </div>
         </section>
+
+
         <section class="card">
             <h2>Web Dev Resources</h2>
 
             <ul>
-                <li>Dev.to Community</li>
-                <li>Smashing Magaziners</li>
-                <li>CSS Tricks</li>
-                <li>W3 Schools</li>
-                <li>Udemy</li>
-                <li>Lorem ipsum</li>
+                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magaziners</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="#" target="_blank">Lorem ipsum</a></li>
             </ul>
         </section>
     </main>
 
 
     <footer>
-        <p></p>
-        <p>Last modification:</p>
+        <p> &copy; <span id="currentyear"></span> &#128640; Jordan Erick Larcher &#128640; Chaco, Argentina</p>
+        <p id="lastModified">Last modification:</p>
     </footer>
 </body>
+
 </html>
