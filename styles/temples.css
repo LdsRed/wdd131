@@ -1,0 +1,127 @@
+*, *::before, *::after {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/**Mobile View*/
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: #eee;
+    color: #000;
+}
+#menu::before {
+    content: "≡";
+}
+
+/**Globals**/
+
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: Roboto, sans-serif;
+}
+
+figure {
+    display: flex; /* Usar flexbox para centrar vertical y horizontalmente */
+    flex-direction: column;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    border: 1px solid steelblue;    
+    overflow: hidden;
+}
+  
+figure img {
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del figure */
+    max-height: 100%; /* Asegura que la imagen no exceda el tamaño del figure */
+    margin: 2rem;
+}
+
+figcaption {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+/* img {
+    width: 100%;
+}  */
+
+header {
+
+    background-color: rgb(24,79,113);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+nav {
+    display: flex;
+}
+
+.navigation {
+    list-style: none;
+}
+
+.navigation li {
+	display: none;
+}
+
+
+.navigation a{
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+
+}
+
+.navigation a:hover, navigation a:active {
+	color: white;
+	background-color: black;
+    text-decoration: overline;
+}
+
+.active {
+    color: yellow;
+}
+
+.show li {
+	display: block;
+}
+
+#menu.show::before {
+	content: "X";
+}
+
+main{
+
+    display: grid;
+}
+
+
+
+footer {
+    background-color: rgb(24,79,113);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    clear: both; 
+    margin-top: 50px;
+}
+
+
+
+
