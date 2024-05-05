@@ -8,65 +8,63 @@
 header {
 
     background-color: rgb(24, 79, 113);
-    display: grid;
-    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
- 
-h1 {
+
+header h1 {
     color: white;
-    margin: 0;
-    display: inline;
-    padding-left: 40px;
 }
  
 #menu {
-    font-size: 1.5rem;
-    background: none;
-    color: white;
+	font-size: 2rem;
+	font-weight:700;
+	text-decoration: none;
+	padding: .5rem .75rem;
+	background-color: #eee;
+	color: #000;
     position: absolute;
     top: 1rem;
     right: 1rem;
 }
 
-#menu::before{
-    content: "☰";
+#menu::before {
+	content: "≡";
 }
 
-#menu.open::before {
-	content: "❎";
+#menu.show::before {
+	content: "X";
 }
 
 .navigation {
     display: flex;
-    flex-direction: column;
-    list-style: none;
-    max-width: 100%;
+	list-style: none;
     color: #fff;
-    font-weight: 700;
 }
+
 
 .navigation a {
-    display: none;
-    font-size: 1.5rem;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
+	display: block;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
 }
 
-.navigation a:hover {
-    background-color: #bbb;
-    color: #333;
-    font-weight: 700;
-    text-decoration: overline;
+.navigation a:hover, navigation a:active {
+	color: white;
+	background-color: black;
 }
 
-/* When the button is clicked - the open class is toggled*/
-
-.open a {
-    display: block;
+.show li {
+	display: block;
 }
+
 
 main {
     display: grid;
