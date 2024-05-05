@@ -1,43 +1,104 @@
-*, *::before, *::after {
+*{
     margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /**Mobile View*/
-#menu {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    padding: .5rem .75rem;
-    background-color: #eee;
-    color: #000;
-}
-#menu::before {
-    content: "≡";
+header {
+
+    background-color: rgb(24, 79, 113);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/**Globals**/
+header h1 {
+    color: white;
+}
+ 
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+#menu::before{
+    content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: #fff;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+}
+
+/* When the button is clicked - the open class is toggled*/
+
+.open a {
+    display: block;
+}
+
+.active::before{
+    content: "📍";
+}
+
+
+main {
+    display: grid;
+}
+
+main h2 {
+    text-align: center;
+}
+
 
 body {
     font-size: 1.2rem;
     line-height: 1.5;
-    font-family: Roboto, sans-serif;
+    font-family: "Sansita", sans-serif;
 }
 
 figure {
-    display: flex; /* Usar flexbox para centrar vertical y horizontalmente */
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    border: 1px solid steelblue;    
+    justify-content: center;
+    align-items: center;
+    border: 1px solid steelblue;
     overflow: hidden;
 }
-  
+
 figure img {
-    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del figure */
-    max-height: 100%; /* Asegura que la imagen no exceda el tamaño del figure */
+    max-width: 100%;
+    max-height: 100%;
     margin: 2rem;
 }
 
@@ -45,83 +106,13 @@ figcaption {
     font-size: 1.1rem;
     text-align: center;
     padding: 1rem;
-    
 }
-
-/* img {
-    width: 100%;
-}  */
-
-header {
-
-    background-color: rgb(24,79,113);
-    color: white;
-    display: flex;
-    justify-content: space-around;
-}
-
-
-
-
-nav {
-    display: flex;
-}
-
-.navigation {
-    list-style: none;
-}
-
-.navigation li {
-	display: none;
-}
-
-
-.navigation a{
-    display: block;
-    padding: 0.75rem;
-    text-align: left;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-	transition: 0.5s;
-	font-size: clamp(1rem, 2vmin, 1.5rem);
-
-}
-
-.navigation a:hover, navigation a:active {
-	color: white;
-	background-color: black;
-    text-decoration: overline;
-}
-
-.active {
-    color: yellow;
-}
-
-.show li {
-	display: block;
-}
-
-#menu.show::before {
-	content: "X";
-}
-
-main{
-
-    display: grid;
-}
-
-
 
 footer {
-    background-color: rgb(24,79,113);
+    background-color: rgb(24, 79, 113);
     color: white;
     padding: 20px;
     text-align: center;
-    clear: both; 
+    clear: both;
     margin-top: 50px;
 }
-
-
-
-
