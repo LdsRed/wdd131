@@ -1,4 +1,7 @@
 
-document.getElementById("currentyear").innerText = new Date().getFullYear();
+const currentYearID = document.getElementById("currentYear");
 
-document.getElementById("lastModified").innerText = "Last modified: " + document.lastModified;
+const dateLastModifiedID = document.getElementById("lastModified");
+
+currentYearID.innerText = new Date().getFullYear();
+dateLastModifiedID.innerText = "Last Modification: " + document.lastModified;

@@ -1,8 +1,3 @@
-document.getElementById("currentyear").innerText = new Date().getFullYear();
-document.getElementById("lastModified").innerText = "Last modified: " + document.lastModified;
-
-
-
 const tempEl = document.getElementById("temperature");
 const windchillEl = document.getElementById("windchill-factor");
 const windSpeedEl = document.getElementById("wind-speed");

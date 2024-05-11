@@ -9,6 +9,9 @@
 /*}*/
 
 @media screen and (min-width: 1000px) {
+    main {
+        position: relative;
+    }
     header, main, footer {
         max-width: 1920px;
         margin: 0 auto;

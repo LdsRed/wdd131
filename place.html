@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
-    <script src="scripts/place.js"></script>
+
+    <script src ="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
     <title>Argentina | Country Page | WDD 131: Dynamic Web Fundamentals</title>
 </head>
 
@@ -79,7 +81,7 @@
                 <div class="labels-container">
                     <div class="data-element">
                         <span class="field">Temperature:</span>
-                        <span id="temperature" class="value">17</span>
+                        <span id="temperature" class="value">8 °C</span>
                     </div>
                     <div class="data-element">
                         <span class="field">Conditions:</span>
@@ -87,7 +89,7 @@
                     </div>
                     <div class="data-element">
                         <span class="field">Wind:</span>
-                        <span id="wind-speed" class="value"></span>
+                        <span id="wind-speed" class="value">5 km/h</span>
                     </div>
                     <div class="data-element">
                         <span class="field">Wind Chill:</span>
@@ -97,10 +99,9 @@
             </div>
         </div>
     </main>
-    <script src="scripts/place.js" defer></script>
     <footer>
-        <p> &copy; <span id="currentyear"></span> - Jordan Erick Larcher - Chaco, Argentina</p>
-        <p id="lastModified">Last modification:</p>
+        <p> &copy; <span id="currentYear"></span> - Jordan Erick Larcher - Chaco, Argentina</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
