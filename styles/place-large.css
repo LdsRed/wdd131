@@ -1,12 +1,12 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+/** {*/
+/*	margin: 0;*/
+/*	padding: 0;*/
+/*	box-sizing: border-box;*/
+/*}*/
 
-body {
-    font-family: "Roboto", sans-serif;
-}
+/*body {*/
+/*    font-family: "Roboto", sans-serif;*/
+/*}*/
 
 @media screen and (min-width: 1000px) {
     header, main, footer {
@@ -14,15 +14,20 @@ body {
         margin: 0 auto;
     }
 
-    .hero-img source {
+    .hero-img {
+        border-top: 10px solid white;
+        border-bottom: 10px solid white;
+    }
+
+    .hero-img img {
         width: 100%;
-        height: 100%;
+        height: 1000px;
         object-fit: cover;
     }
 
     h1 {
         margin-top: -20px;
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .elements-container {
@@ -32,25 +37,26 @@ body {
         justify-content: space-around;
     }
 
-    .flooting-item1, .flooting-item2 {
+    .container-item1, .container-item2 {
         width: 20%;
         height: auto;
-        background-color: rgba(255, 251, 208, 0.9);
+        background-color: var(--background-color-containers); /*rgba(255, 251, 208, 0.9)*/
         border: none;
         min-width: 300px;
         min-height: 100px;
+        position:absolute;
     }
 
     .img-weather {
         display: none;
     }
 
-    .after::after { 
-    content:"";
+    .after::after {
     position: relative;
     left: 140px;
     top: -32px;
     margin-bottom: -30px;
+        content: " ⛅";
     }
 
     h2 {
@@ -62,16 +68,16 @@ body {
 
 
     /**/
-    .flooting-item1 {
-        position: absolute;
-        top: -700px ;
+    .container-item1 {
+        top: -900px ;
         left: 80px;
+        opacity: 0.9;
     }
 
-    .flooting-item2 {
-        position: absolute;
-        bottom: 80px;
+    .container-item2 {
+        bottom: 60px;
         right: 80px;
+        opacity: 0.9;
     }
 
 }

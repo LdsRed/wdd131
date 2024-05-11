@@ -3,29 +3,25 @@ document.getElementById("lastModified").innerText = "Last modified: " + document
 
 
 
-// Windchill factor and Static variables for WEATHER
-// Author: Adson Mettler do Nascimento
+const tempEl = document.getElementById("temperature");
+const windchillEl = document.getElementById("windchill-factor");
+const windSpeedEl = document.getElementById("wind-speed");
 
-// Static values for temperature and wind speed
-var temperatureCelsiusValue = 9;
-var temperatureCelsiusElement = document.getElementById("temperature-info");
-temperatureCelsiusElement.textContent = temperatureCelsiusValue + "°C";
-var windSpeedKmhValue = 50;
-var windSpeedKmhElement = document.getElementById("wind-speed");
-windSpeedKmhElement.textContent = windSpeedKmhValue + " km/h";
+const temp = Number(tempEl.textContent);
+const windSpeed = Number(windSpeedEl.textContent);
 
+const calculateWindChill = (temp, windSpeed) => {
+    const windchill =
+        0.6215 * temp -
+        11.37 * Math.pow(windSpeed, 0.16) +
+        0.3965 * temp * Math.pow(windSpeed, 0.16) +
+        13.12;
+    return windchill;
+};
 
-// Function to calculate windchill factor
-function calculateWindchill(temperatureCelsius, windSpeedKmh) {
-    return 13.12 + 0.6215 * temperatureCelsius - 11.37 * Math.pow(windSpeedKmh, 0.16) + 0.3965 * temperatureCelsius * Math.pow(windSpeedKmh, 0.16);
+if (temp <= 10 && windSpeed > 4.8) {
+    const windchill = calculateWindChill(temp, windSpeed);
+    windchillEl.innerHTML = `${windchill.toFixed(1)} &deg;C`;
+} else {
+    windchillEl.textContent = `N/A`;
 }
-
-// Static values for temperature and wind speed
-var temperatureCelsius = 9;
-var windSpeedKmh = 50;
-
-// Calculate windchill factor
-var windchillFactor = calculateWindchill(temperatureCelsius, windSpeedKmh);
-
-var windchillElement = document.getElementById("windchill-factor");
-windchillElement.textContent = windchillFactor.toFixed(1) + "°C";
