@@ -23,6 +23,7 @@ const aCourse = {
         }
     }
 
+
     // dropStudent: function (sectionNum) {
     //     const sectionIndex = this.sections.findIndex(
     //         (section) => section.sectionNum === sectionNum
