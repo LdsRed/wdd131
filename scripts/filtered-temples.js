@@ -87,12 +87,12 @@ const renderTemples = (templeArr) => {
     templeCards += `
     <section class="temple-card">
       <h2>${temple.templeName}</h2>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="188">
       <ul class="temple-info">
         <li><b>Location:</b> ${temple.location}</li>
         <li><b>Dedicated:</b> ${temple.dedicated}</li>
         <li><b>Size:</b> ${temple.area} sq feet</li>
       </ul>
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="188">
     </section>
     `;
   });

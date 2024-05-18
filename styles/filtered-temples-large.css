@@ -19,17 +19,12 @@
   
     main {
       width: 90%;
+      margin: 0 auto;
     }
   
     .temples {
       grid-template-columns: 1fr 1fr;
-
     }
-
-    .temple-card {
-        width: 400px;
-    }
-
 
     .temple-card img {
       width: 350px;
@@ -42,8 +37,9 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   
+  
     .temple-card img {
-      width: 300px;
+      width: 350px;
       height: auto;
     }
   }
