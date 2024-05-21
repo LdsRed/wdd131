@@ -68,19 +68,36 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // Add more temple objects here...
+  {
+    templeName: "Cordoba Argentina",
+    location: "Cordoba Argentina",
+    dedicated: "2015, May, 17",
+    area: 3193,
+    imageUrl:"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cordoba-argentina/2018/400x250/Cordoba-Argentina-Temple01.jpg"
+  },
+  {
+    templeName: "Buenos Aires Argentina",
+    location: "Buenos Aires Argentina",
+    dedicated: "1986, January, 17",
+    area: 4446,
+    imageUrl:"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/buenos-aires-argentina/400x250/buenos-airies-argentina-temple-1009069-wallpaper.jpg"
+  },
+  {
+    templeName: "Arequipa Perú",
+    location: "Arequipa Perú",
+    dedicated: "2019, November, 30",
+    area: 2505,
+    imageUrl:"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/arequipa-peru/400x250/4-48661c257177c19a0f39a3991b1a7e7aa0338487.jpeg"
+  }
 ];
 
 
-// Caching the DOM.
 const templeContainer = document.getElementById("temples");
 
-// Remove children from temple card container.
 const reset = () => {
   templeContainer.innerHTML = "";
 };
 
-// Render all temple cards inside the HTML temple container.
 const renderTemples = (templeArr) => {
   let templeCards = "";
   templeArr.forEach((temple) => {
@@ -96,13 +113,11 @@ const renderTemples = (templeArr) => {
     </section>
     `;
   });
-  // Render in html.
   templeContainer.innerHTML = templeCards;
 };
 
 renderTemples(temples);
 
-// Caching the DOM.
 const navBar = document.getElementById("navigation");
 
 navBar.addEventListener("click", (event) => {
