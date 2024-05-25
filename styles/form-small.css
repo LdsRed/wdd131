@@ -258,6 +258,15 @@ input[type="radio"] {
 
 /*------Review page --------*/
 
+.container-reviewPage {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 760px;
+    background-color: #bfc2c2;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px #999;
+}
+
 p {
     margin: 1rem;
 }
