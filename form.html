@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="styles/form-large.css">
     <link rel="stylesheet" href="styles/form-medium.css">
     <link rel="stylesheet" href="styles/normalize.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/form.js"></script>
-
 
     <title>Product Review</title>
 </head>
@@ -20,61 +23,60 @@
 <body>
 
 
-    <header>
-        <h1>Product Review</h1>
-    </header>
-    <main>
+<header>
+    <h1>Product Review</h1>
+</header>
+<main>
 
 
-        <form action="review.html" method="get" class="wf1">
+    <form action="review.html" method="get" class="wf1">
 
 
-            <fieldset>
-                <label for="productNameOptions">Product Name</label>
-                <select name="products" id="productNameOptions" required>
-                    <option value="select" disabled selected>Choose a Product ...</option>
+        <label for="productNameOptions">Product Name(*)</label>
+        <select name="products" id="productNameOptions" required>
+            <option value="select" disabled selected>Choose a Product ...</option>
 
-                </select>
-
-
-                <label>Overall Rating</label>
-                <div class="stars">
-                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
-                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
-                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
-                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
-                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
-                </div>
-
-                <label>Date of Installation <input type="date" name="installationDate" id="installation-date"
-                        required></label>
+        </select>
 
 
-                <div>Which features did you find useful in the product?</div>
-                <div>(Check all that apply)</div>
-                <label><input type="checkbox" name="features" value="durability">Durability</label>
-                <label><input type="checkbox" name="features" value="easeOfUse">Ease of Use</label>
-                <label><input type="checkbox" name="features" value="performance">Performance</label>
-                <label><input type="checkbox" name="features" value="design">Design</label>
+        <label>Overall Rating(*) </label>
+        <div class="stars">
+            <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+            <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+            <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+            <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+            <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+        </div>
+
+        <label for="installation-date">Date of Installation(*) <input type="date" name="installationDate"
+                                                                   id="installation-date"
+                                                                   required></label>
 
 
-                <label for="writtenReview">Written Review <span>(Optional)</span></label>
-                <textarea name="" id="writtenReview"></textarea>
-
-                <label>Your Name <span>(Optional)</span></label>
-                <label><input type="text" name="yourName" id="nameId"></label>
-                
-                <input type="submit" value="Post Review">
-            </fieldset>
+        <label>Which features did you find useful in the product?</label>
+        <label id="checkAll">(Check all that apply)</label>
+        <label><input type="checkbox" name="features" value="durability">Durability</label>
+        <label><input type="checkbox" name="features" value="easeOfUse">Ease of Use</label>
+        <label><input type="checkbox" name="features" value="performance">Performance</label>
+        <label><input type="checkbox" name="features" value="design">Design</label>
 
 
-        </form>
-    </main>
+        <label for="writtenReview">Written Review <span>(Optional)</span></label>
+        <textarea name="review" id="writtenReview"></textarea>
 
-    <footer>
-        <p> &copy; <span id="currentyear"></span> Jordan Erick Larcher - Chaco, Argentina</p>
-        <p id="lastModified">Last modification:</p>
-    </footer>
+        <label for="yourName">Your Name <span>(Optional)</span></label>
+        <input type="text" name="yourName" id="yourName">
+
+        <input type="submit" value="Post Review">
+
+
+    </form>
+</main>
+
+<footer>
+    <p> &copy; <span id="currentYear"></span> Jordan Erick Larcher - Chaco, Argentina</p>
+    <p id="lastModified">Last modification:</p>
+</footer>
 </body>
 
 </html>
