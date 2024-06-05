@@ -1,0 +1,288 @@
+:root{
+    --primary:#CCD5AE;
+    --secondary:#E9EDC9;
+    --background:#FEFAE0;
+    --background2:#D4A373;
+    --background-header:#333;
+    --color-gold:#EACF5F;
+    --font:'Fira Sans Book', sans-serif;
+}
+
+
+*{
+    box-sizing: border-box;  
+    font-size: 62.5%;  
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+/*-------Globals-------*/
+body{
+    background-color: var(--background);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.5rem;
+    font-family: var(--font), serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: var(--font), serif;
+}
+
+.container h1 {font-size: 4rem;}
+
+h2 {font-size: 3.2rem;}
+
+h3 {font-size: 2.4rem;}
+
+
+/*--------Header--------*/
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-header);
+}
+
+/* .header__logo{
+    margin: 3rem 0;
+    width: 200px;
+    height: 200px;
+} */
+
+
+
+/*-----------Footer ----------*/
+.footer {
+    background-color: var(--background-header);
+    padding: 1rem 0;
+    margin-top: 2rem;
+    line-height: 1;
+}
+
+.footer__text{
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: var(--font);
+    color: #fff;
+}
+
+/*-----------Nav Bar ---------*/
+
+.nav-bar {
+    background-color: black;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-bar__link{
+    color: #fff;
+    font-size: 3rem;
+    font-family: var(--font), serif;
+}
+
+.nav-bar__link--active,
+.nav-bar__link:hover{
+    color: var(--color-gold);
+}
+
+.cart {
+    background-color:black;
+    color: white;
+    padding: 5px;
+    font-size: 5rem;
+    border-radius: 4px;
+    position: relative;
+}
+
+.cartAmount {
+    font-size: 30px;
+    top: -15px;
+    right: -10px;
+    background-color: var(--color-gold);
+    color: black;
+    position: absolute;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+
+/*-----------Grid-----------*/
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3, auto);
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid{
+        grid-template-columns: repeat(4, auto);
+        gap: 3rem;
+    }
+
+    .item__img{
+        height: 250px;
+        width: 300px;
+    }
+}
+
+/*-----------Products-----------*/
+
+.item {
+    display: block;
+    background-color: #333333;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+.item__img {
+    width:100%;
+}
+
+.item__name{
+    font-size: 2rem;
+}
+
+.item__price{
+    font-size: 2.8rem;
+}
+
+
+.item__name,
+.item__price{
+    font-family: var(--font), serif;
+    margin: 1rem 0;
+    color: white;
+    line-height: 1.2;
+}
+
+
+.item__button{
+    margin: 1rem;
+}
+
+.item__button button{
+    background-color: var(--color-gold);
+    width: 150px;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-family: var(--font);
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+
+.item__button button:hover{
+    background-color: var(--background2);
+}
+
+
+/*--------------------------------------------About Us Page-------------------------------------*/
+
+.about {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    margin-bottom: 10rem;
+}
+
+.aboutUs__img{
+    grid-row: 1/2;
+    width: 100%;
+}
+
+.aboutUs__content p{
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+.aboutUs__content span{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+    }
+    
+    .aboutUs__img {
+        grid-column: 2/3;
+        width: 350px;
+    }
+}
+
+.blocks{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .blocks {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.block {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: var(--font);
+    background-color: var(--background-header);
+    width: 300px;
+}
+
+
+.block__img {
+    width: 100%;
+}
+
+
+.block__title {
+    margin: 0;
+
+}
+
+
+
