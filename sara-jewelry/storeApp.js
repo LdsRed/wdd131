@@ -5,10 +5,10 @@ let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML =  document.querySelector('.listCart');  
 let iconCartSpan = document.querySelector('.icon-cart span');
 
+let msg = document.getElementsByClassName
 
 let listProducts = [];
 let carts = [];
-
 
 
 
@@ -19,7 +19,6 @@ iconCart.addEventListener('click', () => {
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
-
 
 const renderDataToHTML = () => {
     listProductHTML.innerHTML = '';
